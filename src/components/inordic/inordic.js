@@ -1,0 +1,1 @@
+export const HelloInordic = (props) => <div onClick={ () => { alert('onClick') } }>{props.name}</div>
