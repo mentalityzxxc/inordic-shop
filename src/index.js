@@ -1,16 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+
+//Импортируем, компоненты для каждой страницы
+// Страницы - Главная и Каталог
+import { Main, Catalog } from './pages/'
+// Импортируем общие компоненты - шапку и подвал сайта
+import { Header, Footer } from './components'
+
+// Импортируем основные инструменты для работы с маршрутизацией в приложении
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// Объект роутера
+// В данном объекте описаны маршруты приложения
+const router = createBrowserRouter([
+  {
+    // Путь, по которому отображается главная страница
+    path: "/",
+    // Компонент, который содержит главную страницу
+    element: <Main />,
+  },
+  {
+    // Путь, по которому отображается страница каталога
+    path: "/catalog",
+    // Компонент, который содержит логику отображения страницы каталога
+    element: <Catalog />
+  }
+]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+     <Header />
+     <RouterProvider router={router} />
+     <Footer />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
