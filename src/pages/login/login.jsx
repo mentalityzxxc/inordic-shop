@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom";
-
 // Импортируем общие компоненты - шапку и подвал сайта
 import { Header, Footer } from '../../components'
 
 /**
- * Компонент для отображения главной страницы
+ * Компонент для отображения формы авторизации
  */
-export function Main(){
+export function Login(){
     return (
         <main>
             <Header />
-                Контент главной страницы
+                Форма авторизации
             <Footer />
         </main> 
     )

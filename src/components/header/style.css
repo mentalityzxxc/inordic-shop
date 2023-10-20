@@ -1,0 +1,35 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+li {
+    margin-right: 8px;
+}
+a{
+    color: #2a284f;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+header{
+    width: 100%;
+    border-bottom: 1px solid black;
+    height: 50px;
+    display: flex;
+    padding: 5px;
+    background-color: #fdc931;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logo-container {
+    max-width: 100px;
+}
+.logo-container img{
+    width: 100%;
+}
