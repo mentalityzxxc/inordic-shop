@@ -7,8 +7,8 @@ import logoInordic from '../../assets/logo.png'
 import './style.css';
 
 export function Header() {
-    // хук useState https://legacy.reactjs.org/docs/hooks-state.html
-    const [menu, setMenu] = useState([
+    
+    let _menu = [
         {
             id: '232434345',
             text: 'Главная',
@@ -29,7 +29,11 @@ export function Header() {
             text: 'Авторизация',
             to: '/login'
         }
-    ])
+    ]
+    // хук useState https://legacy.reactjs.org/docs/hooks-state.html
+    const [menu, setMenu] = useState(_menu)
+    const [visibleMenu, setVisibleMenu] = useState(false)
+
     //План на след занятие
     // 1 - Рассмотреть map на более простых примерах и сравнить с forEach
     // 2 - Поработать со state
@@ -41,16 +45,35 @@ export function Header() {
                 <div className='logo-container'>
                     <img src={logoInordic} alt="Логотип Inordic" />
                 </div>
-                <ul>
-                    {menu.map((menuItem) => (
-                        <li key={menuItem.id}>
-                            <Link to={menuItem.to}>
-                                {menuItem.text}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-                <button onClick={() => setMenu([])}>Скрыть меню</button>
+                {
+                    visibleMenu &&
+                        <ul className='menu'>
+                            {menu.map((menuItem) => (
+                                <li className='menu-item' key={menuItem.id}>
+                                    <Link to={menuItem.to}>
+                                        {menuItem.text}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul> 
+                }
+                {
+                    !visibleMenu 
+                    ?
+                        <button 
+                            class="btn"
+                            onClick={() => setVisibleMenu(true)}
+                        >
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    :
+                        <button 
+                            class="btn"
+                            onClick={() => setVisibleMenu(false)}
+                        >
+                            <i class="fa fa-close"></i>
+                        </button>
+                }
             </nav>
         </header>
     )

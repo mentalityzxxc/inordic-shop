@@ -1,0 +1,34 @@
+[
+    {
+        "ID": "acdf6b36-4cfe-43e3-be65-65a9a16fa1a3",
+        "TITLE": "Apple Mac book",
+        "DISCR": "Хороший макбук от Apple",
+        "PRICE": "600000",
+        "IMG": "mac.png",
+        "COUNT": "10"
+    },
+    {
+        "ID": "fb850b43-5601-4ab8-aea0-bd86cc96c6e7",
+        "TITLE": "Sumsung",
+        "DISCR": "Sumsung от лучших производителей",
+        "PRICE": "185000",
+        "IMG": "samsung.jpeg",
+        "COUNT": "1355"
+    },
+    {
+        "ID": "872a7210-60db-43cc-b32a-bbdd1b92c0ec",
+        "TITLE": "Lenovo",
+        "DISCR": "Хороший Lenovo",
+        "PRICE": "10000",
+        "IMG": "Lenovo.jpeg",
+        "COUNT": "Количество"
+    },
+    {
+        "ID": "ebdb7098-d387-4f88-bcdf-0b28fde8df31",
+        "TITLE": "HP",
+        "DISCR": "Игровой HP",
+        "PRICE": "100",
+        "IMG": "hp.jpeg",
+        "COUNT": "Количество"
+    }
+]

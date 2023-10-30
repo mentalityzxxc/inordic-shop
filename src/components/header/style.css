@@ -1,17 +1,28 @@
-ul {
-    display: flex;
-    flex-wrap: wrap;
+ul.menu {
+    background: white;
+    border: 1px solid black;
     list-style-type: none;
+    position: absolute;
+    right: 35px;
+    top: 25px;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
 }
-li {
-    margin-right: 8px;
+li.menu-item {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    padding: 0 5px;
 }
 a{
     color: #2a284f;
     text-decoration: none;
 }
 a:hover{
-    color: white;
+    color: #fdc931;
 }
 header{
     width: 100%;
@@ -32,4 +43,8 @@ nav{
 }
 .logo-container img{
     width: 100%;
+}
+
+.fa-desktop{
+    right: 150px;
 }
