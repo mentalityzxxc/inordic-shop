@@ -30,7 +30,6 @@ header{
     height: 50px;
     display: flex;
     padding: 5px;
-    background-color: #fdc931;
 }
 nav{
     display: flex;
@@ -47,4 +46,43 @@ nav{
 
 .fa-desktop{
     right: 150px;
+}
+
+.light {
+    background-color: #fdc931;
+    color: #2a284f;
+}
+
+.dark {
+    background-color: #2a284f;
+    color: #fdc931;
+}
+
+.dark .fa-navicon:before, 
+.dark .fa-reorder:before, 
+.dark .fa-bars:before {
+    color: white;
+}
+
+.light .fa-navicon:before, 
+.light .fa-reorder:before, 
+.light .fa-bars:before {
+    color: #2a284f;
+}
+
+
+.dark .fa-remove:before, 
+.dark .fa-close:before, 
+.dark .fa-times:before {
+    color: white;
+}
+
+.light .fa-remove:before, 
+.light .fa-close:before, 
+.light .fa-times:before {
+    color: #2a284f;
+}
+
+select {
+    margin-left: 10px;
 }
