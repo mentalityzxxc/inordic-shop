@@ -1,0 +1,14 @@
+.banner__button {
+    background-color: red;
+    font-size: 24px;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.banner__button:hover {
+    background-color: unset;
+    outline: 1px solid red;
+    cursor: pointer;
+}
