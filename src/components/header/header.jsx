@@ -103,7 +103,7 @@ export function Header() {
                         type="radio" 
                         id="light" name="theme" 
                         value="light" 
-                        checked 
+                        defaultChecked
                         onClick={() => setTheme('light')}
                     />
                     <label for="light">{text.theme[lang].Light}</label>

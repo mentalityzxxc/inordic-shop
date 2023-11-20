@@ -1,0 +1,30 @@
+.good-item{
+    max-width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.good-item img {
+    max-width: 500px;
+}
+
+.buttons-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons-block p {
+    margin: 0 3px;
+}
+
+.error{
+    margin: 10px;
+    border: 3px solid red;
+    font-size: 20px;
+    color: red;
+}
+
+.good-item .add-to-basket {
+    margin-top: 10px;
+}
