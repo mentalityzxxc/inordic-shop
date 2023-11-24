@@ -86,3 +86,12 @@ nav{
 select {
     margin-left: 10px;
 }
+
+.button-container-header {
+    position: absolute;
+    right: 50px;
+}
+
+.button-container-header button{
+    margin: 3px;
+}

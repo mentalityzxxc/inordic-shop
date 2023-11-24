@@ -12,7 +12,6 @@ import { Main, Catalog, Login, Registration } from './pages/'
 import { CatalogItem } from './components/catalog-item/catalog-item'
 import { CatalogList } from './components/catalog-list/catalog-list'
 
-
 // Импортируем основные инструменты для работы с маршрутизацией в приложении
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Объект роутера

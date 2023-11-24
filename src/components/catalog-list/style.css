@@ -22,16 +22,6 @@ img {
     right: 25px;
 }
 
-.btn, i {
-    position: absolute;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    top: 10px;
-}
-
 .fa-shopping-cart{
     right: 10px;
     bottom: 10px;
@@ -43,5 +33,11 @@ img {
 }
 
 .button-container{
+    position: absolute;
+    bottom: 1px;
+    left: 30px;
+}
 
+.button-container a{
+    margin: 3px;
 }
