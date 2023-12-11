@@ -41,3 +41,8 @@ img {
 .button-container a{
     margin: 3px;
 }
+
+.button-container button {
+    border: none;
+    background: none;
+}

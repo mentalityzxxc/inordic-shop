@@ -8,6 +8,7 @@ import { Theme } from './components/theme.jsx'
 import { Lang } from './components/lang.jsx'
 import { ButtonBasket } from './components/button-basket.jsx'
 import { ButtonBurger } from './components/button-burger.jsx'
+import { useSelector } from 'react-redux'
 
 
 import './style.css';
