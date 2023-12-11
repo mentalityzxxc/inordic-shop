@@ -1,0 +1,13 @@
+[
+    {
+       "ID": "1",
+       "NAME": "Александр",
+       "SURNAME": "Румянцев",
+       "IMG": "https://www.urbanus.ru/storage/public/persons/622/mXZxcgUSSNm5YO3PhKs6fEOyEXTo6m4FaKHIS22a.png",
+       "EMAIL": "sasha@mail.ru",
+       "PHONE": "+79202030004",
+       "LOGIN": "admin",
+       "PASSWORD": "admin",
+       "ROLE": "admin"
+    }
+]
