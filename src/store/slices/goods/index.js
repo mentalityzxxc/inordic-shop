@@ -1,5 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import { createExtraActions } from '../../action/goods'
+
+const { getAllGoods } = createExtraActions()
+
 // Создадим объект слайса 
 export const slice = createSlice(
     {
@@ -13,13 +17,30 @@ export const slice = createSlice(
        },
        extraReducers: (builder) => {
          // Кейс который получает все товары и добавляет их в состояние редакса
-        builder.addCase('GET_ALL_GOODS', (state, action) => {
+         // Старный вариант, который не работает с асинхронным запросом
+        /*builder.addCase('GET_ALL_GOODS', (state, action) => {
           console.log('Сработал экстра редьюсер GET_ALL_GOODS', state, action)
           // Вытаскиваем поле payload и записываем в лист
           const { payload } = action
           // Заполним стейт
           state.list = payload
+        })*/
+
+        // Запрос в процессе
+        builder.addCase(getAllGoods.pending, (state, action) => {
+          console.log('Запросв состоянии pending')
         })
+        // Запрос успешно завершился
+        builder.addCase(getAllGoods.fulfilled, (state, action) => {
+            console.log('Запросв состоянии fulfilled', action)
+            const { payload } = action
+            // Заполним стейт
+            state.list = payload
+         })
+         // Запрос не завершился успешно
+         builder.addCase(getAllGoods.rejected, (state, action) => {
+            console.log('Запросв состоянии rejected')
+         })
 
         // Кейс для добавления товара в корзину
         builder.addCase('ADD_TO_BASKET', (state, action) => {

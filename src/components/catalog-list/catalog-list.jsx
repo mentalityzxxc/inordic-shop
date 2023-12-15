@@ -15,7 +15,7 @@ export function CatalogList() {
     
     // Обращение к состоянию происходит при помощи useSelector
     const goodList = useSelector((state) => state.goods.list)
-
+    console.log('goodList',goodList)
     // Обработчик, который добавляет текущий товар в корзину
     const handlerAddBasket = (good) => {
         //Для того, чтобы запустить редакс, нужно вызвать функцию action внутри диспечера
@@ -43,7 +43,7 @@ export function CatalogList() {
             {goodList.map((goodItem) => {
                 return (
                     <li key={goodItem.ID} className='good-list'>
-                        <img src={require(`../../assets/${goodItem.IMG}`)} />
+                        <img src={goodItem.IMG} />
                         <div>
                             <Link to={goodItem.ID}>
                                 {goodItem.TITLE}
