@@ -27,16 +27,14 @@ export function Login(){
         event.preventDefault();
 
         // Получим значения, которые пользователь ввел в элементы формы 
-        const login = event.srcElement.LOGIN.value
-        const password = event.srcElement.PASSWORD.value
+        //const login = event.srcElement.LOGIN.value
+        //const password = event.srcElement.PASSWORD.value
+        const form = event.srcElement
 
         // Задействовать редакс
         setTimeout(() => {
             dispatch(
-                getItemUser({
-                    login,
-                    password
-                })
+                getItemUser(form)
             );
             setIsLoading(false);
         }, 4000)
@@ -59,7 +57,9 @@ export function Login(){
             <h1>Форма авторизации</h1>
             {
                 user ? (
-                    <h2>Вы успешно авторизованы</h2>
+                    <h2>
+                        Вы успешно авторизованы: {user.NAME} {user.SURNAME}
+                    </h2>
                 ) : (
                     <form onSubmit={loginHandler}>
                         <p><input type="text" name="LOGIN" id='LOGIN'/></p>

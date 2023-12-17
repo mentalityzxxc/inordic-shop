@@ -1,4 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { createExtraActions } from '../../action/users';
+
+
+const { getItemUser } = createExtraActions()
 
 // Создадим объект слайса 
 export const slice = createSlice(
@@ -11,10 +15,14 @@ export const slice = createSlice(
        },
        extraReducers: (builder) => {
          // Кейс который получает пользователя и записывает в глобальное состояние
-        builder.addCase('GET_ITEM_USER', (state, action) => {   
+        /*builder.addCase('GET_ITEM_USER', (state, action) => {   
           const { payload } = action
           state.item = payload
-        })
+        })*/
+        builder.addCase(getItemUser.fulfilled, (state, action) => {   
+         const { payload } = action
+         state.item = payload
+       })
 
        }
     }
